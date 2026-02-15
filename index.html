@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Developer Portfolio">
+  <title>Jihye — Frontend Developer</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👾</text></svg>">
+</head>
+<body>
+
+  <!-- ===== Retro Browser Frame ===== -->
+  <div class="retro-browser">
+    <div class="retro-browser__titlebar">
+      <div class="retro-browser__dots">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <span class="retro-browser__title">jihye.dev</span>
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </div>
+    <div class="retro-browser__content">
+
+      <!-- ===== Navigation ===== -->
+      <nav class="navbar" id="navbar">
+        <div class="nav-container">
+          <a href="#hero" class="nav-logo">jihye<span>.dev</span></a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-right">
+            <button class="theme-toggle--nav" aria-label="Toggle theme">
+              <span class="theme-toggle__icon">🌙</span>
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- ===== Hero Section ===== -->
+      <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <div class="hero-pixel-avatar">
+            <span class="pixel-avatar">👾</span>
+            <span class="pixel-speech-bubble">Hello!</span>
+          </div>
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Jihye</h1>
+          <p class="hero-title">
+            <span id="typing-text"></span><span class="typing-cursor"></span>
+          </p>
+          <p class="hero-description">
+            사용자 경험을 중심으로 생각하며, 깔끔하고 직관적인 인터페이스를 만드는 프론트엔드 개발자입니다.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-arrow-down"></i> 프로젝트 보기
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope"></i> 연락하기
+            </a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- ===== About Section ===== -->
+      <section class="section" id="about">
+        <div class="section-container">
+          <div class="section-header reveal">
+            <p class="section-label">About Me</p>
+            <h2 class="section-title">안녕하세요, 저를 소개합니다</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="about-grid">
+            <div class="about-image reveal reveal-delay-1">
+              <img src="https://picsum.photos/280/340" alt="Profile photo" class="about-image-photo">
+            </div>
+            <div class="about-text reveal reveal-delay-2">
+              <h3>프론트엔드 개발자, Jihye</h3>
+              <p>
+                안녕하세요! 저는 사용자 중심의 웹 경험을 만들어가는 프론트엔드 개발자입니다.
+                직관적이고 접근성 높은 인터페이스를 설계하는 것에 열정을 가지고 있으며,
+                최신 웹 기술을 활용하여 빠르고 아름다운 웹 애플리케이션을 구축합니다.
+              </p>
+              <p>
+                React, Next.js, Vue.js 등 모던 프레임워크에 능숙하며,
+                디자인 시스템 구축과 성능 최적화에 깊은 관심을 가지고 있습니다.
+                끊임없이 배우고 성장하며, 팀과 함께 더 나은 제품을 만들어가고 싶습니다.
+              </p>
+              <div class="about-info">
+                <div class="about-info-item">
+                  <span class="label">이름</span>
+                  <span class="value">Jihye</span>
+                </div>
+                <div class="about-info-item">
+                  <span class="label">역할</span>
+                  <span class="value">Frontend Developer</span>
+                </div>
+                <div class="about-info-item">
+                  <span class="label">위치</span>
+                  <span class="value">Seoul, South Korea</span>
+                </div>
+                <div class="about-info-item">
+                  <span class="label">학력</span>
+                  <span class="value">컴퓨터공학 전공</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Skills Section ===== -->
+      <section class="section section--alt" id="skills">
+        <div class="section-container">
+          <div class="section-header reveal">
+            <p class="section-label">Skills</p>
+            <h2 class="section-title">기술 스택</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">Frontend</h3>
+            <div class="skills-grid">
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-brands fa-html5"></i>
+                <span class="skill-name">HTML5</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span class="skill-name">CSS3</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-2">
+                <i class="fa-brands fa-js"></i>
+                <span class="skill-name">JavaScript</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-2">
+                <span class="skill-icon">TS</span>
+                <span class="skill-name">TypeScript</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-3">
+                <i class="fa-brands fa-react"></i>
+                <span class="skill-name">React</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-3">
+                <span class="skill-icon">N</span>
+                <span class="skill-name">Next.js</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-4">
+                <i class="fa-brands fa-vuejs"></i>
+                <span class="skill-name">Vue.js</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-4">
+                <span class="skill-icon"><i class="fa-solid fa-wind"></i></span>
+                <span class="skill-name">Tailwind CSS</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-5">
+                <i class="fa-brands fa-sass"></i>
+                <span class="skill-name">SASS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">Tools</h3>
+            <div class="skills-grid">
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-brands fa-git-alt"></i>
+                <span class="skill-name">Git</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-brands fa-github"></i>
+                <span class="skill-name">GitHub</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-2">
+                <span class="skill-icon"><i class="fa-solid fa-code"></i></span>
+                <span class="skill-name">VS Code</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-2">
+                <i class="fa-brands fa-figma"></i>
+                <span class="skill-name">Figma</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-3">
+                <span class="skill-icon"><i class="fa-solid fa-cube"></i></span>
+                <span class="skill-name">Webpack</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-3">
+                <span class="skill-icon"><i class="fa-solid fa-bolt"></i></span>
+                <span class="skill-name">Vite</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-4">
+                <i class="fa-solid fa-list-check"></i>
+                <span class="skill-name">Jira</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-4">
+                <i class="fa-solid fa-book"></i>
+                <span class="skill-name">Confluence</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">DevOps</h3>
+            <div class="skills-grid">
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-brands fa-docker"></i>
+                <span class="skill-name">Docker</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-1">
+                <i class="fa-solid fa-dharmachakra"></i>
+                <span class="skill-name">Kubernetes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Others -->
+          <div class="skills-category reveal">
+            <h3 class="skills-category-title">Others</h3>
+            <div class="skills-grid">
+              <div class="skill-card reveal reveal-delay-1">
+                <span class="skill-icon"><i class="fa-solid fa-plug"></i></span>
+                <span class="skill-name">REST API</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-1">
+                <span class="skill-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+                <span class="skill-name">Responsive</span>
+              </div>
+              <div class="skill-card reveal reveal-delay-2">
+                <span class="skill-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span class="skill-name">SEO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Projects Section ===== -->
+      <section class="section" id="projects">
+        <div class="section-container">
+          <div class="section-header reveal">
+            <p class="section-label">Projects</p>
+            <h2 class="section-title">주요 프로젝트</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card reveal reveal-delay-1" data-project="0">
+              <div class="project-thumbnail">
+                <img src="https://picsum.photos/seed/dashboard/600/400" alt="E-Commerce Dashboard" class="project-thumbnail-img">
+              </div>
+              <div class="project-info">
+                <h3>E-Commerce Dashboard</h3>
+                <p>실시간 데이터 시각화와 주문 관리 기능을 갖춘 이커머스 관리자 대시보드입니다. 반응형 디자인으로 모바일에서도 최적화되어 있습니다.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">TypeScript</span>
+                  <span class="project-tag">Tailwind CSS</span>
+                  <span class="project-tag">Chart.js</span>
+                </div>
+                <div class="project-links">
+                  <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card reveal reveal-delay-2" data-project="1">
+              <div class="project-thumbnail">
+                <img src="https://picsum.photos/seed/chat/600/400" alt="Real-time Chat App" class="project-thumbnail-img">
+              </div>
+              <div class="project-info">
+                <h3>Real-time Chat App</h3>
+                <p>WebSocket을 활용한 실시간 채팅 애플리케이션으로, 1:1 채팅과 그룹 채팅, 파일 공유 기능을 제공합니다.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">Socket.io</span>
+                  <span class="project-tag">Prisma</span>
+                  <span class="project-tag">PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                  <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card reveal reveal-delay-3" data-project="2">
+              <div class="project-thumbnail">
+                <img src="https://picsum.photos/seed/weather/600/400" alt="Weather Dashboard" class="project-thumbnail-img">
+              </div>
+              <div class="project-info">
+                <h3>Weather Dashboard</h3>
+                <p>OpenWeather API를 활용한 날씨 대시보드입니다. 위치 기반 날씨 정보, 5일 예보, 대기질 정보를 제공합니다.</p>
+                <div class="project-tags">
+                  <span class="project-tag">Vue.js</span>
+                  <span class="project-tag">Pinia</span>
+                  <span class="project-tag">OpenWeather API</span>
+                </div>
+                <div class="project-links">
+                  <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card reveal reveal-delay-4" data-project="3">
+              <div class="project-thumbnail">
+                <img src="https://picsum.photos/seed/design/600/400" alt="Portfolio Template Builder" class="project-thumbnail-img">
+              </div>
+              <div class="project-info">
+                <h3>Portfolio Template Builder</h3>
+                <p>드래그 앤 드롭으로 포트폴리오 웹사이트를 만들 수 있는 노코드 빌더입니다. 다양한 템플릿과 커스터마이징 옵션을 제공합니다.</p>
+                <div class="project-tags">
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">DnD Kit</span>
+                  <span class="project-tag">Zustand</span>
+                  <span class="project-tag">Framer Motion</span>
+                </div>
+                <div class="project-links">
+                  <a href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Experience Section ===== -->
+      <section class="section section--alt" id="experience">
+        <div class="section-container">
+          <div class="section-header reveal">
+            <p class="section-label">Experience</p>
+            <h2 class="section-title">경력 사항</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="timeline">
+
+            <div class="timeline-item reveal reveal-delay-1">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="timeline-date">2023.03 — 현재</p>
+                <h3>Senior Frontend Developer</h3>
+                <p class="company">ABC Tech — 서울</p>
+                <ul>
+                  <li>React/Next.js 기반 B2B SaaS 플랫폼 프론트엔드 개발</li>
+                  <li>디자인 시스템 구축 및 컴포넌트 라이브러리 관리</li>
+                  <li>웹 성능 최적화로 LCP 40% 개선</li>
+                  <li>주니어 개발자 멘토링 및 코드 리뷰</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-2">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="timeline-date">2021.06 — 2023.02</p>
+                <h3>Frontend Developer</h3>
+                <p class="company">XYZ Studio — 서울</p>
+                <ul>
+                  <li>Vue.js 기반 이커머스 플랫폼 프론트엔드 개발</li>
+                  <li>결제 시스템 연동 및 장바구니 기능 구현</li>
+                  <li>모바일 퍼스트 반응형 웹 개발</li>
+                  <li>A/B 테스트를 통한 전환율 25% 향상</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal reveal-delay-3">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <p class="timeline-date">2020.01 — 2021.05</p>
+                <h3>Junior Frontend Developer</h3>
+                <p class="company">StartUp Inc. — 서울</p>
+                <ul>
+                  <li>React 기반 사내 관리 도구 프론트엔드 개발</li>
+                  <li>REST API 연동 및 상태 관리 설계</li>
+                  <li>UI/UX 디자이너와 협업하여 사용자 인터페이스 개선</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Contact Section ===== -->
+      <section class="section" id="contact">
+        <div class="section-container">
+          <div class="section-header reveal">
+            <p class="section-label">Contact</p>
+            <h2 class="section-title">연락하기</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="contact-grid">
+
+            <div class="contact-info reveal reveal-delay-1">
+              <h3>함께 일해요</h3>
+              <p>
+                새로운 프로젝트, 협업 제안, 또는 궁금한 점이 있으시면
+                언제든지 연락해 주세요. 빠른 시일 내에 답변드리겠습니다.
+              </p>
+              <a href="mailto:hello@jihye.dev" class="contact-email">
+                <i class="fa-regular fa-envelope"></i> hello@jihye.dev
+              </a>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Blog">
+                  <i class="fa-solid fa-blog"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form reveal reveal-delay-2" onsubmit="event.preventDefault();">
+              <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" placeholder="홍길동">
+              </div>
+              <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="email" id="email" placeholder="example@email.com">
+              </div>
+              <div class="form-group">
+                <label for="message">메시지</label>
+                <textarea id="message" placeholder="메시지를 입력해 주세요"></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fa-regular fa-paper-plane"></i> 보내기
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Footer ===== -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-text">&copy; 2026 Jihye. All rights reserved.</p>
+          <a href="#hero" class="back-to-top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </footer>
+
+    </div><!-- /.retro-browser__content -->
+  </div><!-- /.retro-browser -->
+
+  <!-- ===== Project Modal ===== -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-container">
+      <div class="modal-titlebar">project_details.exe</div>
+      <button class="modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img class="modal-image" id="modalImage" src="" alt="">
+      <div class="modal-body">
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="modal-tags" id="modalTags"></div>
+        <div class="modal-role">
+          <h4>My Role</h4>
+          <p id="modalRole"></p>
+        </div>
+        <div class="modal-links" id="modalLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
