@@ -51,11 +51,41 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         </header>
 
-        <div className="project-detail__section">
-          <h4><i className="fa-solid fa-user" /> My Role</h4>
-          <p>{project.role}</p>
+        {/* Highlights */}
+        {project.highlights && project.highlights.length > 0 && (
+          <div className="project-detail__highlights">
+            {project.highlights.map((highlight) => (
+              <div key={highlight} className="project-detail__highlight-card">
+                <div className="project-detail__highlight-value">
+                  <i className="fa-solid fa-star" />
+                </div>
+                <div className="project-detail__highlight-label">{highlight}</div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Overview Bar */}
+        <div className="project-detail__overview">
+          <div className="project-detail__overview-item">
+            <div className="project-detail__overview-label">Role</div>
+            <div className="project-detail__overview-value">{project.role.split('.')[0]}</div>
+          </div>
+          {project.teamSize && (
+            <div className="project-detail__overview-item">
+              <div className="project-detail__overview-label">Team</div>
+              <div className="project-detail__overview-value">{project.teamSize}</div>
+            </div>
+          )}
+          {project.period && (
+            <div className="project-detail__overview-item">
+              <div className="project-detail__overview-label">Period</div>
+              <div className="project-detail__overview-value">{project.period}</div>
+            </div>
+          )}
         </div>
 
+        {/* Background */}
         {project.background && (
           <div className="project-detail__section">
             <h4><i className="fa-solid fa-lightbulb" /> Background</h4>
@@ -63,6 +93,46 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         )}
 
+        {/* Tech Stack */}
+        {project.techStack && project.techStack.length > 0 && (
+          <div className="project-detail__section project-detail__section--techstack">
+            <h4><i className="fa-solid fa-layer-group" /> Tech Stack</h4>
+            {project.techStack.map((category) => (
+              <div key={category.category} className="project-detail__techstack-category">
+                <div className="project-detail__techstack-title">{category.category}</div>
+                <div className="project-detail__techstack-grid">
+                  {category.items.map((item) => (
+                    <div key={item.name} className="project-detail__techstack-item">
+                      <div className="project-detail__techstack-name">{item.name}</div>
+                      {item.detail && (
+                        <div className="project-detail__techstack-detail">{item.detail}</div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Architecture */}
+        {project.architecture && project.architecture.length > 0 && (
+          <div className="project-detail__section project-detail__section--architecture">
+            <h4><i className="fa-solid fa-sitemap" /> Architecture</h4>
+            {project.architecture.map((note) => (
+              <div key={note.title} className="project-detail__architecture-block">
+                <div className="project-detail__architecture-subtitle">{note.title}</div>
+                {note.type === 'diagram' ? (
+                  <pre className="project-detail__architecture-diagram">{note.content}</pre>
+                ) : (
+                  <p className="project-detail__architecture-text">{note.content}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Key Decisions */}
         {project.decisions && project.decisions.length > 0 && (
           <div className="project-detail__section project-detail__section--decisions">
             <h4><i className="fa-solid fa-code-branch" /> Key Decisions</h4>
@@ -83,6 +153,55 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         )}
 
+        {/* Challenges */}
+        {project.challenges && project.challenges.length > 0 && (
+          <div className="project-detail__section">
+            <h4><i className="fa-solid fa-fire" /> Challenges</h4>
+            <div className="project-detail__challenges-list">
+              {project.challenges.map((challenge, i) => (
+                <div key={challenge.problem} className="project-detail__challenge">
+                  <div className="project-detail__challenge-number">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+                  <div className="project-detail__challenge-body">
+                    <div className="project-detail__challenge-step">
+                      <div className="project-detail__challenge-step-label">Problem</div>
+                      <div className="project-detail__challenge-step-text">{challenge.problem}</div>
+                    </div>
+                    <div className="project-detail__challenge-step">
+                      <div className="project-detail__challenge-step-label">Approach</div>
+                      <div className="project-detail__challenge-step-text">{challenge.approach}</div>
+                    </div>
+                    <div className="project-detail__challenge-step">
+                      <div className="project-detail__challenge-step-label">Outcome</div>
+                      <div className="project-detail__challenge-step-text">{challenge.outcome}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Contributions */}
+        {project.contributions && project.contributions.length > 0 && (
+          <div className="project-detail__section">
+            <h4><i className="fa-solid fa-user-check" /> My Contributions</h4>
+            <div className="project-detail__contributions-grid">
+              {project.contributions.map((contribution) => (
+                <div key={contribution.area} className="project-detail__contribution">
+                  <div className="project-detail__contribution-area">{contribution.area}</div>
+                  <div className="project-detail__contribution-desc">{contribution.description}</div>
+                  {contribution.impact && (
+                    <div className="project-detail__contribution-impact">{contribution.impact}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Results */}
         {project.results && project.results.length > 0 && (
           <div className="project-detail__section project-detail__section--results">
             <h4><i className="fa-solid fa-trophy" /> Results</h4>
@@ -94,6 +213,19 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         )}
 
+        {/* Lessons Learned */}
+        {project.lessonsLearned && project.lessonsLearned.length > 0 && (
+          <div className="project-detail__section">
+            <h4><i className="fa-solid fa-graduation-cap" /> Lessons Learned</h4>
+            <ul className="project-detail__lessons">
+              {project.lessonsLearned.map((lesson) => (
+                <li key={lesson}>{lesson}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Pagination */}
         <div className="project-detail__pagination">
           {prevProject ? (
             <a

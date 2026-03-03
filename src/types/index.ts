@@ -1,3 +1,26 @@
+export interface TechStackEntry {
+  category: string;
+  items: { name: string; detail?: string }[];
+}
+
+export interface Challenge {
+  problem: string;
+  approach: string;
+  outcome: string;
+}
+
+export interface ArchitectureNote {
+  title: string;
+  content: string;
+  type?: 'text' | 'diagram';
+}
+
+export interface Contribution {
+  area: string;
+  description: string;
+  impact?: string;
+}
+
 export interface Project {
   id: number;
   title: string;
@@ -11,6 +34,13 @@ export interface Project {
   decisions?: { title: string; content: string }[];
   results?: string[];
   period?: string;
+  teamSize?: string;
+  highlights?: string[];
+  techStack?: TechStackEntry[];
+  challenges?: Challenge[];
+  architecture?: ArchitectureNote[];
+  contributions?: Contribution[];
+  lessonsLearned?: string[];
 }
 
 export interface Skill {

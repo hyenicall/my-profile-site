@@ -1480,6 +1480,284 @@ body {
   font-size: 0.7rem;
 }
 
+/* Highlights */
+.project-detail__highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-detail__highlight-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  box-shadow: 3px 3px 0 0 var(--pixel-shadow);
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.project-detail__highlight-value {
+  font-family: var(--font-pixel);
+  font-size: 0.65rem;
+  color: var(--accent);
+  line-height: 2;
+  margin-bottom: 0.25rem;
+}
+
+.project-detail__highlight-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Overview Bar */
+.project-detail__overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-bottom: 2rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  box-shadow: 3px 3px 0 0 var(--pixel-shadow);
+}
+
+.project-detail__overview-item {
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+
+.project-detail__overview-item:not(:last-child) {
+  border-right: 2px dashed var(--border-color);
+}
+
+.project-detail__overview-label {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  line-height: 1.8;
+}
+
+.project-detail__overview-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Tech Stack */
+.project-detail__section--techstack .project-detail__techstack-category {
+  margin-bottom: 1.25rem;
+}
+
+.project-detail__section--techstack .project-detail__techstack-category:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail__techstack-title {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+  line-height: 1.8;
+}
+
+.project-detail__techstack-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+}
+
+.project-detail__techstack-item {
+  padding: 0.6rem 0.85rem;
+  background: var(--window-bg);
+  border: 1px solid var(--border-color);
+}
+
+.project-detail__techstack-name {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-detail__techstack-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Architecture */
+.project-detail__section--architecture {
+  border-left: 4px solid var(--accent);
+}
+
+.project-detail__architecture-block {
+  margin-bottom: 1.5rem;
+}
+
+.project-detail__architecture-block:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail__architecture-subtitle {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+  line-height: 1.8;
+}
+
+.project-detail__architecture-diagram {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--window-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-detail__architecture-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Challenges */
+.project-detail__challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-detail__challenge {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-detail__challenge:not(:last-child) {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px dashed var(--border-color);
+}
+
+.project-detail__challenge-number {
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+  color: var(--accent);
+  line-height: 1.8;
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.project-detail__challenge-body {
+  flex: 1;
+}
+
+.project-detail__challenge-step {
+  margin-bottom: 0.6rem;
+}
+
+.project-detail__challenge-step:last-child {
+  margin-bottom: 0;
+}
+
+.project-detail__challenge-step-label {
+  font-family: var(--font-pixel);
+  font-size: 0.4rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2rem;
+  line-height: 1.8;
+}
+
+.project-detail__challenge-step-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* Contributions */
+.project-detail__contributions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project-detail__contribution {
+  padding: 1rem;
+  background: var(--window-bg);
+  border: 1px solid var(--border-color);
+}
+
+.project-detail__contribution-area {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+  line-height: 1.8;
+}
+
+.project-detail__contribution-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.project-detail__contribution-impact {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+.project-detail__contribution-impact::before {
+  content: '→ ';
+  color: var(--accent);
+}
+
+/* Lessons Learned */
+.project-detail__lessons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-detail__lessons li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  padding: 0.5rem 1rem;
+  padding-left: 2rem;
+  position: relative;
+  background: var(--window-bg);
+  border: 1px solid var(--border-color);
+}
+
+.project-detail__lessons li::before {
+  content: '>';
+  position: absolute;
+  left: 0.75rem;
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+}
+
 /* Pagination */
 .project-detail__pagination {
   display: flex;
@@ -1708,6 +1986,27 @@ body {
 
   .project-detail__section {
     padding: 1.25rem;
+  }
+
+  .project-detail__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail__overview {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail__overview-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 2px dashed var(--border-color);
+  }
+
+  .project-detail__techstack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail__contributions-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-detail__pagination-item {
