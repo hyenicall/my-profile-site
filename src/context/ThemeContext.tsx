@@ -5,14 +5,10 @@ type Theme = 'light' | 'dark';
 
 const STORAGE_KEY = 'theme-preference';
 
-function getSystemTheme(): Theme {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-
 function getInitialTheme(): Theme {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved === 'light' || saved === 'dark') return saved;
-  return getSystemTheme();
+  return 'light';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
