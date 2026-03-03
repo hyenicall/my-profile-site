@@ -1,9 +1,9 @@
 import { useTypingAnimation } from '../../hooks/useTypingAnimation';
 
 const TYPING_TEXTS = [
-  'Frontend Developer',
-  'UI/UX Enthusiast',
-  'Creative Coder',
+  'Frontend Engineer',
+  'Architecture Designer',
+  'React Specialist',
   'Problem Solver',
 ];
 
@@ -30,7 +30,7 @@ export default function Hero() {
           <span className="typing-cursor" />
         </p>
         <p className="hero-description">
-          사용자 경험을 중심으로 생각하며, 깔끔하고 직관적인 인터페이스를 만드는 프론트엔드 개발자입니다.
+          클라우드 인프라와 WebRTC 화상회의 서비스를 설계하고 구현하는 프론트엔드 엔지니어입니다.
         </p>
         <div className="hero-cta">
           <a

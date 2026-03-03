@@ -2,9 +2,9 @@ import { RevealContainer, RevealItem } from '../ui/ScrollReveal';
 
 const INFO_ITEMS = [
   { label: '이름', value: 'Jihye' },
-  { label: '역할', value: 'Frontend Developer' },
+  { label: '역할', value: 'Frontend Engineer' },
   { label: '위치', value: 'Seoul, South Korea' },
-  { label: '학력', value: '컴퓨터공학 전공' },
+  { label: '경력', value: '4년+' },
 ];
 
 export default function About() {
@@ -30,16 +30,16 @@ export default function About() {
           </RevealContainer>
           <RevealContainer>
             <RevealItem className="about-text">
-              <h3>프론트엔드 개발자, Jihye</h3>
+              <h3>프론트엔드 엔지니어, Jihye</h3>
               <p>
-                안녕하세요! 저는 사용자 중심의 웹 경험을 만들어가는 프론트엔드 개발자입니다.
-                직관적이고 접근성 높은 인터페이스를 설계하는 것에 열정을 가지고 있으며,
-                최신 웹 기술을 활용하여 빠르고 아름다운 웹 애플리케이션을 구축합니다.
+                안녕하세요! 클라우드 인프라 플랫폼과 WebRTC 화상회의 서비스를 설계하고 구현해 온
+                프론트엔드 엔지니어입니다. 복잡한 비즈니스 요구사항을 직관적인 UI로 풀어내는 데
+                집중하며, 확장 가능한 아키텍처 설계에 깊은 관심을 가지고 있습니다.
               </p>
               <p>
-                React, Next.js, Vue.js 등 모던 프레임워크에 능숙하며,
-                디자인 시스템 구축과 성능 최적화에 깊은 관심을 가지고 있습니다.
-                끊임없이 배우고 성장하며, 팀과 함께 더 나은 제품을 만들어가고 싶습니다.
+                React와 TypeScript를 중심으로 다양한 상태 관리 도구와 빌드 시스템을 활용하며,
+                CI/CD 파이프라인 구축부터 다국어 지원까지 제품 전반의 프론트엔드 경험을 다뤄왔습니다.
+                팀과 함께 더 나은 제품을 만들어가고 싶습니다.
               </p>
               <div className="about-info">
                 {INFO_ITEMS.map(({ label, value }) => (

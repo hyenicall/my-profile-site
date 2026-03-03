@@ -8,8 +8,9 @@ export interface Project {
   github?: string;
   live?: string;
   background?: string;
-  decisions?: string;
-  results?: string;
+  decisions?: { title: string; content: string }[];
+  results?: string[];
+  period?: string;
 }
 
 export interface Skill {
