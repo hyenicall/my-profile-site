@@ -16,15 +16,14 @@ export const skillCategories: SkillCategory[] = [
     title: 'State & Data',
     skills: [
       { name: 'Zustand', icon: '🐻', isTextIcon: true },
-      { name: 'React Query', icon: 'RQ', isTextIcon: true },
-      { name: 'MobX', icon: 'MX', isTextIcon: true },
+      { name: 'React Query', icon: '', imageUrl: 'https://cdn.simpleicons.org/reactquery' },
+      { name: 'MobX', icon: '', imageUrl: 'https://cdn.simpleicons.org/mobx' },
     ],
   },
   {
     title: 'Infra & Tools',
     skills: [
       { name: 'Docker', icon: 'fa-brands fa-docker' },
-      { name: 'Nginx', icon: 'N', isTextIcon: true },
       { name: 'GitHub Actions', icon: 'fa-brands fa-github' },
       { name: 'GitLab CI/CD', icon: 'fa-brands fa-gitlab' },
       { name: 'Jenkins', icon: 'fa-brands fa-jenkins' },

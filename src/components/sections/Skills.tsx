@@ -3,6 +3,13 @@ import { RevealContainer, RevealItem } from '../ui/ScrollReveal';
 import type { Skill } from '../../types';
 
 function SkillIcon({ skill }: { skill: Skill }) {
+  if (skill.imageUrl) {
+    return (
+      <span className="skill-icon">
+        <img src={skill.imageUrl} alt={skill.name} className="skill-icon-img" />
+      </span>
+    );
+  }
   if (skill.isTextIcon) {
     return (
       <span className="skill-icon">

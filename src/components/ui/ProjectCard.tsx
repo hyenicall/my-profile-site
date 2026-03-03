@@ -23,20 +23,15 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="project-info">
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <p className="project-description">{project.description}</p>
         <div className="project-tags">
-          {project.tags.slice(0, 4).map((tag) => (
+          {project.tags.slice(0, 3).map((tag) => (
             <span className="project-tag" key={tag}>{tag}</span>
           ))}
-          {project.tags.length > 4 && (
-            <span className="project-tag project-tag--more">+{project.tags.length - 4}</span>
+          {project.tags.length > 3 && (
+            <span className="project-tag project-tag--more">+{project.tags.length - 3}</span>
           )}
         </div>
-        {project.results && project.results.length > 0 && (
-          <p className="project-highlight">
-            <i className="fa-solid fa-chevron-right" /> {project.results[0]}
-          </p>
-        )}
         <div className="project-links">
           {project.github && (
             <a href={project.github}>
@@ -45,7 +40,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
           {project.live && (
             <a href={project.live}>
-              <i className="fa-solid fa-arrow-up-right-from-square" /> Live Demo
+              <i className="fa-solid fa-arrow-up-right-from-square" /> Live
             </a>
           )}
           <span className="project-detail-cta">

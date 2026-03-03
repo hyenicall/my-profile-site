@@ -47,6 +47,7 @@ export interface Skill {
   name: string;
   icon: string;
   isTextIcon?: boolean;
+  imageUrl?: string;
 }
 
 export interface SkillCategory {

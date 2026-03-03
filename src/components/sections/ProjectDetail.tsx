@@ -23,19 +23,11 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           alt={project.title}
           className="project-detail__hero-img"
         />
-        {project.period && (
-          <span className="project-detail__period-badge">{project.period}</span>
-        )}
       </div>
 
       <div className="section-container">
         <header className="project-detail__header">
           <h1 className="project-detail__title">{project.title}</h1>
-          <div className="project-detail__tags">
-            {project.tags.map((tag) => (
-              <span className="project-tag" key={tag}>{tag}</span>
-            ))}
-          </div>
           <p className="project-detail__description">{project.description}</p>
           <div className="project-detail__links">
             {project.github && (
@@ -51,36 +43,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         </header>
 
-        {/* Highlights */}
-        {project.highlights && project.highlights.length > 0 && (
-          <div className="project-detail__highlights">
-            {project.highlights.map((highlight) => (
-              <div key={highlight} className="project-detail__highlight-card">
-                <div className="project-detail__highlight-value">
-                  <i className="fa-solid fa-star" />
-                </div>
-                <div className="project-detail__highlight-label">{highlight}</div>
-              </div>
-            ))}
+        {/* Role / Period */}
+        <div className="project-detail__meta">
+          <div className="project-detail__meta-item">
+            <span className="project-detail__meta-label">Role</span>
+            <span className="project-detail__meta-value">{project.role.split('.')[0]}</span>
           </div>
-        )}
-
-        {/* Overview Bar */}
-        <div className="project-detail__overview">
-          <div className="project-detail__overview-item">
-            <div className="project-detail__overview-label">Role</div>
-            <div className="project-detail__overview-value">{project.role.split('.')[0]}</div>
-          </div>
-          {project.teamSize && (
-            <div className="project-detail__overview-item">
-              <div className="project-detail__overview-label">Team</div>
-              <div className="project-detail__overview-value">{project.teamSize}</div>
-            </div>
-          )}
           {project.period && (
-            <div className="project-detail__overview-item">
-              <div className="project-detail__overview-label">Period</div>
-              <div className="project-detail__overview-value">{project.period}</div>
+            <div className="project-detail__meta-item">
+              <span className="project-detail__meta-label">Period</span>
+              <span className="project-detail__meta-value">{project.period}</span>
             </div>
           )}
         </div>
@@ -90,6 +62,24 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           <div className="project-detail__section">
             <h4><i className="fa-solid fa-lightbulb" /> Background</h4>
             <p>{project.background}</p>
+          </div>
+        )}
+
+        {/* My Contributions — 리크루터가 먼저 보는 정보 */}
+        {project.contributions && project.contributions.length > 0 && (
+          <div className="project-detail__section">
+            <h4><i className="fa-solid fa-user-check" /> My Contributions</h4>
+            <div className="project-detail__contributions-grid">
+              {project.contributions.map((contribution) => (
+                <div key={contribution.area} className="project-detail__contribution">
+                  <div className="project-detail__contribution-area">{contribution.area}</div>
+                  <div className="project-detail__contribution-desc">{contribution.description}</div>
+                  {contribution.impact && (
+                    <div className="project-detail__contribution-impact">{contribution.impact}</div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -183,43 +173,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         )}
 
-        {/* Contributions */}
-        {project.contributions && project.contributions.length > 0 && (
-          <div className="project-detail__section">
-            <h4><i className="fa-solid fa-user-check" /> My Contributions</h4>
-            <div className="project-detail__contributions-grid">
-              {project.contributions.map((contribution) => (
-                <div key={contribution.area} className="project-detail__contribution">
-                  <div className="project-detail__contribution-area">{contribution.area}</div>
-                  <div className="project-detail__contribution-desc">{contribution.description}</div>
-                  {contribution.impact && (
-                    <div className="project-detail__contribution-impact">{contribution.impact}</div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Results */}
         {project.results && project.results.length > 0 && (
-          <div className="project-detail__section project-detail__section--results">
+          <div className="project-detail__section project-detail__section--outcomes">
             <h4><i className="fa-solid fa-trophy" /> Results</h4>
             <ul className="project-detail__results">
               {project.results.map((result) => (
                 <li key={result}>{result}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-
-        {/* Lessons Learned */}
-        {project.lessonsLearned && project.lessonsLearned.length > 0 && (
-          <div className="project-detail__section">
-            <h4><i className="fa-solid fa-graduation-cap" /> Lessons Learned</h4>
-            <ul className="project-detail__lessons">
-              {project.lessonsLearned.map((lesson) => (
-                <li key={lesson}>{lesson}</li>
               ))}
             </ul>
           </div>
